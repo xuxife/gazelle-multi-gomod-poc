@@ -1,4 +1,4 @@
-module github.com/xuxife/gazelle-multi-gomod-poc/main
+module github.com/xuxife/gazelle-multi-gomod-poc/inner-module
 
 go 1.24
 

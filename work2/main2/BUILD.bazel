@@ -1,17 +1,17 @@
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
 
 go_library(
-    name = "main_lib",
+    name = "main2_lib",
     srcs = ["main.go"],
-    importpath = "github.com/xuxife/gazelle-multi-gomod-poc/main",
+    importpath = "github.com/xuxife/gazelle-multi-gomod-poc/work2/main2",
     visibility = ["//visibility:private"],
     deps = [
-        "@com_github_xuxife_gazelle_multi_gomod_poc_dep_v0.0.1//:dep"
+        "@com_github_xuxife_gazelle_multi_gomod_poc_dep_v0_0_2//:dep"
     ],
 )
 
 go_binary(
-    name = "main",
-    embed = [":main_lib"],
+    name = "main2",
+    embed = [":main2_lib"],
     visibility = ["//visibility:public"],
 )

@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "inner_module_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/xuxife/gazelle-multi-gomod-poc/inner-module",
+    visibility = ["//visibility:private"],
+    deps = [
+        "@com_github_xuxife_gazelle_multi_gomod_poc_dep_v0_0_1//:dep"
+    ],
+)
+
+go_binary(
+    name = "inner_module",
+    embed = [":inner_module_lib"],
+    visibility = ["//visibility:public"],
+)
