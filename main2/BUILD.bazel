@@ -1,4 +1,11 @@
+load("@gazelle//:def.bzl", "gazelle")
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+gazelle(
+    name = "gazelle",
+    prefix = "github.com/xuxife/gazelle-multi-gomod-poc/main2",
+    versioned = ":go.mod",
+)
 
 go_library(
     name = "main2_lib",
